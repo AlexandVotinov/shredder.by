@@ -1,0 +1,506 @@
+@font-face {
+    font-family: 'LithosPro'; 
+    src: url('font/LithosPro-Black.otf');
+   }
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    user-select: none;
+    cursor: default;
+    transition: all 0.2s;
+}
+
+shredder{
+    font-family: LithosPro;
+    font-weight: bold;
+}
+
+header{
+    position: relative;
+    widows: 100%;    
+    height: 45px;
+    background-color: #222;
+    color: #ddd;
+}
+        
+.header-logo{
+    color: #fff;
+    display: inline-block;
+    padding-left: 10px;
+    line-height: 45px;
+    font-family: 'LithosPro';
+}
+
+.header-logo-decorate{
+    position: absolute;
+    color: #222;
+    font-family: 'LithosPro';
+    left: 10px;
+    line-height: 30px;
+    font-weight: bold;
+    font-size: 13px
+}
+
+        
+.header-menu{
+    display: inline-block;
+    float: right;
+    padding-right: 40px;    
+}
+        
+.header-menu div{
+    position: relative;
+    display: inline-block;
+    line-height: 45px;
+    margin-left: 20px;
+}
+
+
+.header-menu div:hover{
+    color: #fff;
+    font-weight: bold;
+}
+
+.header-menu__button{
+    display: none;
+    float: right;
+    line-height: 45px;
+    font-size: 20px;
+    padding-right: 40px;
+}
+
+.header-menu__button:hover{
+    color: #fff;
+    font-weight: bold;
+}
+
+
+
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    background-color: #fff;
+    min-height: 100vh;
+}
+
+.main-info h1{
+    font-size: 18px;
+    display: inline;
+    font-weight: 100;
+}
+
+.main-slider{
+    position: relative;
+}
+
+#slides img{
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+/* 
+Первичные стили:
+С ними работает слайд шоу
+*/
+
+#slides {
+ position: relative;
+ height: 100%;
+ padding: 0px;
+ margin: 0px;
+ list-style-type: none;
+}
+
+.slide {
+ position: absolute;
+ left: 0px;
+ top: 0px;
+ width: 100%;
+ height: 100%;
+ opacity: 0;
+ z-index: 1;
+
+ -webkit-transition: opacity 1s;
+ -moz-transition: opacity 1s;
+ -o-transition: opacity 1s;
+ transition: opacity 1s;
+}
+
+.showing {
+ opacity: 1;
+ z-index: 2;
+}
+
+/*
+Второстепенные стили:
+Внешний вид; можете изменять
+*/
+
+.slide {
+ box-sizing: border-box;
+ color: #fff;
+}
+
+.main-info{
+    position: relative;
+    color: #222;
+    padding: 30px;
+    font-size: 18px;
+    padding-bottom: 100px;
+}
+
+.main-info ul li{
+    margin: 20px;
+    color: #E34234;
+}
+
+.main-info ul li span{
+    color: #222;
+}
+
+.button-order{
+    position: absolute;
+    bottom: 60px;
+    right: 20px;
+    width: 150px;
+            height: 40px;
+            text-align: center;
+    line-height: 40px;
+    font-size: 25px;
+            color: #ddd;
+            background-color: #E34234;
+}
+
+.button-order:hover{
+            font-weight: bold;
+            color:#fff;
+            border:px solid #fff;
+        }
+
+
+        
+        .form{
+            position: absolute;
+            bottom: 60px;
+            right: 20px;
+            display: none;
+            width: 250px;
+            padding: 15px 25px;
+            border: 1px solid #fff;
+            background-color: #E34234;
+        }
+        
+        form p{
+            color:#ddd;
+        }
+        
+.button-close{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    color:#fff;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+}
+
+.button-close i:hover{
+    font-weight: bold;
+}
+
+.button-close i{
+    font-size:25px;
+}
+
+        form input,
+        form textarea{
+            display: block;
+            width: 240px;
+            padding: 5px;
+            margin: 5px 0;
+            border: none;
+            font-weight: bold;
+            color: #222;
+        }
+      
+        form input:focus,
+        form textarea:focus{
+            outline: none;
+        }
+        
+        form textarea{
+            height: 100px;
+        }
+
+.button-submit {
+            width: 100px;
+            height: 25px;
+            margin-top: 10px;
+            border: 1px solid #ddd;
+            text-align: center;
+            color: #ddd;
+            background-color: #E34234;
+        }
+        
+        .button-submit:hover{
+            font-weight: bold;
+            color:#fff;
+            border:px solid #fff;
+        }
+
+
+
+
+
+
+.description-panel{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: auto;
+            background: linear-gradient(45deg, #EECFBA, #C5DDE8);
+            padding: 10px;
+        }
+        
+        .description-panel__item{
+            text-align: center;
+            color: #222;
+        }
+        
+        .description-panel__item p:nth-child(2){
+            font-size: 30px;
+        }
+        
+        .description-panel__item i{
+            font-size: 40px;
+        }
+
+
+
+
+
+.presentation-panel{
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: auto;
+    background-color: #fff;
+}
+
+hashtag{
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+}
+.presentation-panel__info{
+    background: white;
+    padding: 30px;
+}
+
+.presentation-panel__info p:nth-child(1){
+    color: #222;
+    font-size: 2em;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.presentation-panel__info p:nth-child(1n+2):hover{
+    transform: scale(1.02);
+}
+
+
+.presentation-panel__info p{
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.presentation-panel__img{
+    position: relative;
+    
+}
+
+.presentation-panel__img img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+
+
+
+
+
+
+.article-block{
+    display: grid;
+    grid-template-columns: 3% 97%;
+    grid-template-rows: auto;
+    background-color: #fff;
+}
+
+.article-block__decorate{
+    background-color: #E34234;
+}
+
+.article-block__text{
+    padding: 20px;
+    font-size: 17px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer{
+    position: relative;
+    width: 100%;
+    margin-top: 30px;
+    background-color: #222;
+    color: #ddd;
+    text-align: center;
+    padding-bottom: 10px;
+    z-index: 1;
+}
+
+.footer-decorate-background{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: #222;
+}
+
+.footer-decorate{
+    position: absolute;
+    width: 50%;
+    height: 50px;
+    background: #222;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: -1;
+}
+
+footer:hover .footer-decorate{
+    transform-origin: 100% 0%;
+    transform: rotate(2deg);
+}
+
+.footer-social i{
+    font-size: 28px;
+    margin: 10px 5px;
+}
+        
+.footer-social i:hover{
+    color: #fff;
+}
+
+
+
+
+
+
+
+@media (max-width: 550px){
+    .header-menu{
+        display: none;  
+        position: absolute;
+        width: 100%;
+        padding: 0;
+        background: #333;
+        text-align: center;
+        opacity: 0.9;
+        z-index: 3;
+    }
+    .header-menu__button{
+        display: inline-block;
+    }
+    .description-panel{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto;
+            background-color: #333;
+            padding: 10px;
+            
+        }
+    .description-panel__item{
+            margin: 20px;
+        }
+    
+    .footer-decorate{
+    width: 80%;
+}
+}
+
+@media (max-width: 700px){
+    main{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 400px auto;
+    } 
+    
+    .presentation-panel{
+    display: grid;
+    grid-template-columns: 1fr;
+        grid-template-rows: auto;
+}
+    .presentation-panel__img{
+        display: none;
+    }
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
